@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="hello">Hello World</p>
+    <input id="username">
+    <select id="intrest">
+        <option>Sport</option>
+        <option>Music</option>
+        <option>Space</option>
+        <option>Tech</option>
+    </select>
+    <p id="output"></p>
+
+</body>
+
+<!-- Selector -->
+<script>
+    // let grittings = document.getElementById('hello');
+    // let grittings = document.querySelector('p');
+    let grittings = document.querySelector('#hello');
+
+    document.getElementById('hello').addEventListener("click", function() {
+        let username = document.querySelector('input')
+        let intrest = document.querySelector('select')
+        document.querySelector('#output').innerHTML = "Hi " + username.value
+    })
+    document.getElementById('intrest').addEventListener("change", function() {
+        console.log(document.querySelector('select').value)
+    })
+
+    document.getElementById('username').addEventListener("keyup", function(e) {
+        console.log(e.which)
+    })
+
+    // setTimeout(function() {
+    //     alert('Subscribe')
+    // }, 2000);
+
+    // setInterval(function() {
+    //     console.log("OMG")
+    // }, 500)
+</script>
+
+</html>
